@@ -1,0 +1,15 @@
+{
+  "name": "Page Redder",
+  "action": {
+    "default_title": "make this page red",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Turns the page red when you click the icon",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

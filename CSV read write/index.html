@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download CSV</title>
+    <script>
+        function saveFile(blob, fileName) {
+                if (window.navigator.msSaveOrOpenBlob) {
+                    window.navigator.msSaveOrOpenBlob(blob, fileName)
+                } else {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a')
+                    document.body.appendChild(a)
+                    a.href = url;
+                    a.download = fileName
+                    a.click();
+                }
+            }
+
+            function createCsv() {
+
+                    const people = [
+                        { name: 'joe', age: '41', city: 'dubai', job: 'accountant' },
+                        { name: 'allys', age: '21', city: 'kenya', job: 'coder' },
+                        { name: 'cole', age: '20', city: 'texas', job: 'laundry' }
+                    ]
+                    let csvContent = 'name,age,city,job\n'
+
+                    people.forEach((person) => {
+                        let row = person.name + ',' + person.age + ',' + person.city + ',' + person.job + '\n'
+                        csvContent += row
+                    })
+                    // console.log(csvContent)
+                    let data = new Blob([csvContent], { type: 'text/csv' })
+                    saveFile(data, 'text.csv')
+                }
+    </script>
+</head>
+<body>
+    <h1>Write to CSV</h1>
+    <form>
+        <input type="button" value="Write to CSV" onclick="createCsv()">
+    </form>
+
+</body>
+</html>

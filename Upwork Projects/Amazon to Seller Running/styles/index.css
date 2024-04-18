@@ -1,0 +1,11 @@
+body {
+    min-width: 91px;
+    min-height: 110px;
+    background-color: #0B207A;
+}
+
+button {
+    cursor: pointer;
+    width: 90px;
+    margin-bottom: 8px;
+}

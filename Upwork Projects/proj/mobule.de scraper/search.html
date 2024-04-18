@@ -1,0 +1,1253 @@
+<div id="container" class="page">
+
+    <div class="vehicle-category-selection">
+        <h1>Fahrzeuge suchen</h1>
+        <a class="vehicle-category-selection-car" data-category="Car" href="index.html?page=dss&amp;vc=Car">
+            <article class="cBox cBox--content">
+                <section class="cBox-body vehicle-category-selection-item">
+                    <i class="gicon-category-xl-car-black"></i>
+                    <p>Pkw</p>
+                </section>
+            </article>
+        </a>
+        <a class="vehicle-category-selection-motorbike" data-category="Motorbike"
+            href="index.html?page=dss&amp;vc=Motorbike">
+            <article class="cBox cBox--content">
+                <section class="cBox-body vehicle-category-selection-item">
+                    <i class="gicon-category-xl-bike-black"></i>
+                    <p>Motorräder</p>
+                </section>
+            </article>
+        </a>
+        <a class="vehicle-category-selection-motorhome" data-category="Motorhome"
+            href="index.html?page=dss&amp;vc=Motorhome">
+            <article class="cBox cBox--content">
+                <section class="cBox-body vehicle-category-selection-item">
+                    <i class="gicon-category-xl-camper-black"></i>
+                    <p>Wohnmobile und -wagen</p>
+                </section>
+            </article>
+        </a>
+        <a class="vehicle-category-selection-truck" data-category="Truck" href="index.html?page=truck">
+            <article class="cBox cBox--content">
+                <section class="cBox-body vehicle-category-selection-item">
+                    <i class="gicon-category-xl-truck-black"></i>
+                    <p>Lkw &amp; Nutzfahrzeuge</p>
+                </section>
+            </article>
+        </a>
+    </div>
+    <div class="content" id="content">
+        <div class="notificationArea inactive">
+            <div class="content"></div>
+        </div>
+        <div id="pageContainer">
+            <div class="dssContainer inactive" id="dss-page">
+                <div id="dssForm" class="dssForm" role="main">
+                    <div>
+                        <form id="dss-form" action="search/execute.html" method="POST">
+                            <input type="hidden" name="csrfToken"
+                                value="04c52eece011439af7bdbc489b68650e71cdbd6c8970c976c6085ec3122f5fd7">
+                            <div class="formContainer" data-template="dss_Car"> </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="dssTools" id="dssHitcounter">
+                    <div class="fixed">
+                        <div class="outer" data-template="dss_hitcounter"> </div>
+                        <div class="actionLinks"> </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="sesContainer active" id="ses-page">
+                <div class="sesActions" data-template="sesActions"><span class="left"><a class="infoLink back">Zurück
+                            zum Suchformular</a></span><span class="right">
+                        <div class="searchOrderDirty">
+                            <div class="content inactive">Sie haben Ihre Suchkriterien geändert, jedoch noch nicht
+                                gespeichert.</div>
+                        </div><a class="infoLink saveSearch">Suche speichern</a>&nbsp; &nbsp; &nbsp;<a
+                            class="infoLink newSearch">Neue Suche</a>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="sesRefineSearch">
+                    <div class="sesQuickSearchForm">
+                        <form name="quickSearch" id="quickSearch">
+                            <input type="hidden" name="csrfToken"
+                                value="04c52eece011439af7bdbc489b68650e71cdbd6c8970c976c6085ec3122f5fd7">
+                            <div class="box-content" data-template="sesQuickSearch"><strong
+                                    class="headline-magellan">Suche anpassen</strong>
+                                <div class="separator ">
+                                    <hr>
+                                </div>
+                                <div class="row cols2 clearfix">
+                                    <div class="col col1 min-price"><label class="block-label"
+                                            for="minPrice"><strong>Preis</strong> von</label><input type="text"
+                                            data-id="form.price.value.from" name="pf" value="" placeholder="Beliebig">
+                                    </div> <!-- col1 -->
+                                    <div class="col col2 max-price"><label class="block-label"
+                                            for="maxPrice">bis</label><input type="text" data-id="form.price.value.to"
+                                            name="pt" value="" placeholder="Beliebig"></div> <!-- col2 -->
+                                </div> <!-- row -->
+                                <div class="row cols2 clearfix">
+                                    <div class="col difference"><label class="block-label"
+                                            for="minPrice"><strong>Differenz mindestens</strong></label><input
+                                            type="text" data-id="form.price.dealerDifference" name="pd" value=""
+                                            placeholder="Beliebig"><span class="unit">%</span></div>
+                                </div> <!-- row -->
+                                <div class="row cols2 clearfix">
+                                    <div class="col col1 min-registration-date"><label class="block-label"
+                                            for="minFirstRegistrationDate"><strong>EZ</strong> von</label><input
+                                            class="min" type="text" data-id="form.firstRegistration.month.from"
+                                            name="frmf" value="1" placeholder="Monat"><input class="max" type="text"
+                                            data-id="form.firstRegistration.year.from" name="fryf" value="1995"
+                                            placeholder="Jahr"></div> <!-- col1 -->
+                                    <div class="col col2 max-registration-date"><label class="block-label"
+                                            for="maxFirstRegistrationDate">bis</label><input class="min" type="text"
+                                            data-id="form.firstRegistration.month.to" name="frmt" value="12"
+                                            placeholder="Monat"><input class="max" type="text"
+                                            data-id="form.firstRegistration.year.to" name="fryt" value="2022"
+                                            placeholder="Jahr"></div> <!-- col2 -->
+                                </div> <!-- row -->
+                                <div class="row cols2 clearfix">
+                                    <div class="col col1 min-mileage"><label for="minMileage"><strong>km</strong>
+                                            von</label><input type="text" data-id="form.mileage.from" name="mif"
+                                            value="1000" placeholder="Beliebig"></div> <!-- col1 -->
+                                    <div class="col col2 max-mileage"><label for="maxMileage">bis</label><input
+                                            type="text" data-id="form.mileage.to" name="mit" value=""
+                                            placeholder="Beliebig"></div> <!-- col2 -->
+                                </div> <!-- row -->
+                                <div class="row cols2 clearfix">
+                                    <div class="col col1 zipcode"><label class="block-label"
+                                            for="zipcode"><strong>PLZ</strong></label><input type="text"
+                                            data-id="form.ambit.zipcode" name="az" value="41812" autocomplete="off"
+                                            placeholder=""></div> <!-- col1 -->
+                                    <div class="col col2 zipcode-radius"><label class="block-label inactive"
+                                            for="zipcodeRadius"><strong>Umkreis</strong></label><select
+                                            data-id="form.ambit.radius" name="ar" class="arSelect">
+                                            <option value="">Kein</option>
+                                            <option value="10">10 km</option>
+                                            <option value="20">20 km</option>
+                                            <option value="50">50 km</option>
+                                            <option value="100">100 km</option>
+                                            <option value="200" selected="selected">200 km</option>
+                                            <option value="400">400 km</option>
+                                        </select></div> <!-- col2 -->
+                                </div> <!-- row -->
+                                <div class="row cols2 clearfix">
+                                    <div class="col col1-2 country"><select data-id="form.ambit.country" name="ac"
+                                            class="acSelect">
+                                            <option value="">Beliebig</option>
+                                            <option value="EG">Ägypten</option>
+                                            <option value="AL">Albanien</option>
+                                            <option value="AD">Andorra</option>
+                                            <option value="ET">Äthiopien</option>
+                                            <option value="BE">Belgien</option>
+                                            <option value="BA">Bosnien und Herzegowina</option>
+                                            <option value="BR">Brasilien</option>
+                                            <option value="BG">Bulgarien</option>
+                                            <option value="DK">Dänemark</option>
+                                            <option value="DE" selected="selected">Deutschland</option>
+                                            <option value="EE">Estland</option>
+                                            <option value="FO">Faröer</option>
+                                            <option value="FI">Finnland</option>
+                                            <option value="FR">Frankreich</option>
+                                            <option value="GR">Griechenland</option>
+                                            <option value="GB">Großbritannien</option>
+                                            <option value="IE">Irland</option>
+                                            <option value="IS">Island</option>
+                                            <option value="IL">Israel</option>
+                                            <option value="IT">Italien</option>
+                                            <option value="JP">Japan</option>
+                                            <option value="JO">Jordanien</option>
+                                            <option value="CA">Kanada</option>
+                                            <option value="HR">Kroatien</option>
+                                            <option value="KW">Kuwait</option>
+                                            <option value="LV">Lettland</option>
+                                            <option value="LB">Libanon</option>
+                                            <option value="LI">Liechtenstein</option>
+                                            <option value="LT">Litauen</option>
+                                            <option value="LU">Luxemburg</option>
+                                            <option value="MT">Malta</option>
+                                            <option value="MA">Marokko</option>
+                                            <option value="MK">Mazedonien</option>
+                                            <option value="MX">Mexiko</option>
+                                            <option value="MD">Moldawien</option>
+                                            <option value="MC">Monaco</option>
+                                            <option value="ME">Montenegro</option>
+                                            <option value="NZ">Neuseeland</option>
+                                            <option value="NL">Niederlande</option>
+                                            <option value="NG">Nigeria</option>
+                                            <option value="NO">Norwegen</option>
+                                            <option value="OM">Oman</option>
+                                            <option value="AT">Österreich</option>
+                                            <option value="PL">Polen</option>
+                                            <option value="PT">Portugal</option>
+                                            <option value="RO">Rumänien</option>
+                                            <option value="RU">Russland</option>
+                                            <option value="SM">San Marino</option>
+                                            <option value="SA">Saudi-Arabien</option>
+                                            <option value="SE">Schweden</option>
+                                            <option value="CH">Schweiz</option>
+                                            <option value="RS">Serbien</option>
+                                            <option value="SK">Slowakische Republik</option>
+                                            <option value="SI">Slowenien</option>
+                                            <option value="ES">Spanien</option>
+                                            <option value="ZA">Südafrika</option>
+                                            <option value="KR">Südkorea</option>
+                                            <option value="TW">Taiwan</option>
+                                            <option value="CZ">Tschechische Republik</option>
+                                            <option value="TN">Tunesien</option>
+                                            <option value="TR">Türkei</option>
+                                            <option value="UA">Ukraine</option>
+                                            <option value="HU">Ungarn</option>
+                                            <option value="US">USA</option>
+                                            <option value="AE">Vereinigte Arabische Emirate</option>
+                                            <option value="BY">Weißrussland</option>
+                                            <option value="CY">Zypern</option>
+                                        </select></div> <!-- col2 -->
+                                </div> <!-- row --><br class="clear">
+                                <div class="row row-submit clearfix"><button><em>Angebote anzeigen <strong
+                                                class="hitCounter">517</strong></em></button></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="sesHistogram" data-template="sesHistogram"><strong class="headline">Suche eingrenzen<div
+                                class="infoIconLink"><span class="infoIcon">&nbsp;</span>
+                                <div class="infoBox">
+                                    <div class="infoIconOrange"></div>
+                                    <h4>Info</h4><a class="close"></a>
+                                    <p>Lass Dir nur die Fahrzeuge anzeigen, die Dich interessieren. Die Zahl in Klammern
+                                        hinter jedem Suchkriterium zeigt, wie viele Fahrzeuge diesem entsprechen. Mit
+                                        einem Klick kannst Du das Suchergebnis auf diese Insertate begrenzen.</p>
+                                </div>
+                            </div></strong>
+                        <div class="separator">
+                            <hr>
+                        </div>
+                        <div id="histogramEntries" class="row"><strong>Marke</strong>
+                            <ul>
+                                <li class="entry">HYMER / ERIBA / HYMERCAR (34)</li>
+                                <li class="entry">Volkswagen (33)</li>
+                                <li class="entry">Mercedes-Benz (32)</li>
+                                <li class="entry">Dethleffs (26)</li>
+                                <li class="entry">Fiat (22)</li>
+                                <li class="showmore">Auswahl erweitern</li>
+                            </ul>
+                            <div class="separator"></div><strong>Leistung</strong>
+                            <ul>
+                                <li class="entry">56 kW - 66 kW (6)</li>
+                                <li class="entry">66 kW - 75 kW (9)</li>
+                                <li class="entry">75 kW - 86 kW (28)</li>
+                                <li class="showmore">Auswahl erweitern</li>
+                            </ul>
+                            <div class="separator"></div><strong>Außenfarbe</strong>
+                            <ul>
+                                <li class="entry">Weiß (308)</li>
+                                <li class="entry">Grau (65)</li>
+                                <li class="entry">Silber (48)</li>
+                                <li class="showmore">Auswahl erweitern</li>
+                            </ul>
+                            <div class="separator"></div><strong>Getriebe</strong>
+                            <ul>
+                                <li class="entry">Schaltgetriebe (344)</li>
+                                <li class="entry">Automatik (162)</li>
+                                <li class="entry">Halbautomatik (8)</li>
+                            </ul>
+                            <div class="separator"></div><strong>Kraftstoffart</strong>
+                            <ul>
+                                <li class="entry">Diesel (508)</li>
+                                <li class="entry">Benzin (2)</li>
+                                <li class="entry">Autogas (LPG) (1)</li>
+                            </ul>
+                            <div class="separator"></div><strong>Inserate mit Video</strong>
+                            <ul>
+                                <li class="entry">Inserate mit Video (6)</li>
+                            </ul>
+                            <div class="separator"></div><strong>Kategorie</strong>
+                            <ul>
+                                <li class="entry">Kastenwagen (178)</li>
+                                <li class="entry">Teilintegrierter (133)</li>
+                                <li class="entry">Integrierter (120)</li>
+                                <li class="showmore">Auswahl erweitern</li>
+                            </ul>
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sesListing">
+                    <div class="sesHeader" data-template="sesHeader">
+                        <h2><span class="hitCounter">517</span> Angebote - Diese Fahrzeuge entsprechen folgenden
+                            Suchkriterien:</h2>
+                        <div id="sesDutchman">
+                            <div class="sesSearchCriteria">
+                                <div class="sesSearchCriteriaGroup"><span class="sesSearchCriteriaItem"
+                                        data-id="form.category" data-value="62"><em>Alkoven</em></span><span
+                                        class="sesSearchCriteriaItem" data-id="form.category"
+                                        data-value="64"><em>Integrierter</em></span><span class="sesSearchCriteriaItem"
+                                        data-id="form.category" data-value="61"><em>Kastenwagen</em></span><span
+                                        class="sesSearchCriteriaItem" data-id="form.category"
+                                        data-value="63"><em>Teilintegrierter</em></span></div>
+                                <div class="sesSearchCriteriaGroup"><span class="sesSearchCriteriaItem"
+                                        data-id="form.sellerType" data-value="FSBO"><em>Privatanbieter</em></span><span
+                                        class="sesSearchCriteriaItem" data-id="form.sellerType"
+                                        data-value="COMMERCIAL_FSBO"><em>Firmenfahrzeuge</em></span></div>
+                                <div class="sesSearchCriteriaGroup"><span class="sesSearchCriteriaItem"
+                                        data-id="form.damageUnrepaired" data-value="false"><em>Beschädigte Fahrzeuge:
+                                            Nicht anzeigen</em></span></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sesPaginationBox" data-template="sesPagination">
+                        <div class="sesPagination">
+                            <ul>
+                                <li><span>Seite</span></li>
+                                <li class="pagination active"><a data-page="1"
+                                        title="Gehe zu Seite 1"><span>1</span></a></li>
+                                <li class="pagination "><a data-page="2" title="Gehe zu Seite 2"><span>2</span></a></li>
+                                <li class="pagination "><a data-page="3" title="Gehe zu Seite 3"><span>3</span></a></li>
+                                <li class="pagination "><a data-page="4" title="Gehe zu Seite 4"><span>4</span></a></li>
+                                <li class="pagination "><a data-page="5" title="Gehe zu Seite 5"><span>5</span></a></li>
+                                <li class="pagination "><a data-page="6" title="Gehe zu Seite 6"><span>6</span></a></li>
+                                <li class="pagination "><a data-page="7" title="Gehe zu Seite 7"><span>7</span></a></li>
+                                <li class="pagination "><a data-page="8" title="Gehe zu Seite 8"><span>8</span></a></li>
+                                <li class="pagination "><a data-page="9" title="Gehe zu Seite 9"><span>9</span></a></li>
+                                <li class="pagination "><a data-page="10" title="Gehe zu Seite 10"><span>10</span></a>
+                                </li>
+                                <li><span>... von <a data-page="26" title="Gehe zu Seite 26">26</a></span></li>
+                                <li class="nextPage"><a data-page="2" title="Zur nächsten Seite"><span>Zur nächsten
+                                            Seite</span>&nbsp;</a></li>
+                                <li class="lastPage"><a data-page="26" title="Zur letzten Seite"><span>Zur letzten
+                                            Seite</span>&nbsp;</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div id="sesSort" class="sesSort" data-template="sesSort">
+                        <div class="inner"><span class="sesSortBy"><label for="sopt">Sortieren nach</label>
+                                <div><select data-id="form.sortOption" name="sopt" class="soptSelect">
+                                        <option value="BY_PRICE">Preis</option>
+                                        <option value="BY_TIME" selected="selected">Eingabedatum</option>
+                                        <option value="BY_MAKE_MODEL">Marke/Modell</option>
+                                        <option value="BY_FR">Erstzulassung</option>
+                                        <option value="BY_MILEAGE">Kilometerstand</option>
+                                        <option value="BY_ZIPCODE">PLZ</option>
+                                        <option value="BY_POWER">Leistung</option>
+                                        <option value="BY_DISTANCE">Entfernung</option>
+                                    </select></div><label for="so">&nbsp;</label>
+                                <div><select data-id="form.sortOrder" name="so" class="soSelect">
+                                        <option value="ASCENDING">Aufsteigend</option>
+                                        <option value="DESCENDING" selected="selected">Absteigend</option>
+                                    </select></div>
+                            </span>
+                            <div class="clearfix"> </div>
+                            <div class="labels"><label class="sellerType">Anbieter</label><label><span class="sortLabel"
+                                        data-id="form.sortOption" data-value="BY_FR">EZ / BJ<div class="infoIconLink">
+                                            <span class="infoIcon">&nbsp;</span>
+                                            <div class="infoBox">
+                                                <div class="infoIconOrange"></div>
+                                                <h4>Info</h4><a class="close"></a>
+                                                <p>EZ: Erstzulassung, BJ: Baujahr</p>
+                                            </div>
+                                        </div></span></label><label><span class="sortLabel" data-id="form.sortOption"
+                                        data-value="BY_MILEAGE">Km-Stand</span></label><label class="price"><span
+                                        class="sortLabel" data-id="form.sortOption" data-value="BY_PRICE">Preis<div
+                                            class="infoIconLink"><span class="infoIcon">&nbsp;</span>
+                                            <div class="infoBox">
+                                                <div class="infoIconOrange"></div>
+                                                <h4>Info</h4><a class="close"></a>
+                                                <p>Bei Ihrer Suche werden Händler- und Endkundenpreise berücksichtigt.
+                                                    Durch Markieren der Checkbox können Sie auch ausschließlich nach
+                                                    Inseraten mit Händlerpreis suchen.</p>
+                                            </div>
+                                        </div></span></label><br clear="all"></div>
+                        </div>
+                    </div>
+                    <div id="searchResultList" data-template="sesResultList">
+                        <ul class="sesList">
+                            <li class="listing" data-id="381865733">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381865733"><a class="listing"
+                                            href="index.html?adId=381865733&amp;page=des" data-id="381865733"
+                                            onclick="return false">Joa Camp 75 T Teilintegrierter</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/32/327c2ca8-ff49-4d3e-bc57-b57970cd7ac4?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-56332
+                                                    Oberfell</strong><br>Teilintegrierter, Gebrauchtfahrzeug<br>HU
+                                                04/2024<br>104 kW (141 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 04/2022</span></div>
+                                            <div class="dataCol4"><span>48.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>62.000
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 29.12.2023, 15:48&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381865733"><button class="parking"
+                                                    data-id="381865733"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381859559">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381859559"><a class="listing"
+                                            href="index.html?adId=381859559&amp;page=des" data-id="381859559"
+                                            onclick="return false">Sun Living A 75 SL</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/4c/4c224373-2412-4ee2-a952-662d681bf335?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-48249 Dülmen</strong><br>Alkoven,
+                                                Gebrauchtfahrzeug<br>HU 04/2025<br>103 kW (140 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 04/2022</span></div>
+                                            <div class="dataCol4"><span>24.366 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>64.278 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 29.12.2023, 13:51&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381859559"><button class="parking"
+                                                    data-id="381859559"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="376561576">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="376561576"><a class="listing"
+                                            href="index.html?adId=376561576&amp;page=des" data-id="376561576"
+                                            onclick="return false">Mercedes-Benz Marco Polo Edition, 360 Kamera, AHK,
+                                            Küche</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/ff/ff432087-e0c8-4f4f-a71c-b6909e55def9?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-65205 Wiesbaden</strong><br>Kastenwagen,
+                                                Gebrauchtfahrzeug<br>HU 09/2025<br>140 kW (190 PS)<br>Klimaautomatik
+                                            </div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 09/2016</span></div>
+                                            <div class="dataCol4"><span>72.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>53.900
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 29.12.2023, 12:30&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="376561576"><button class="parking"
+                                                    data-id="376561576"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381851001">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381851001"><a class="listing"
+                                            href="index.html?adId=381851001&amp;page=des" data-id="381851001"
+                                            onclick="return false">Glücksmobil Wohnmobil </a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/b3/b35ad5b9-5d61-408a-9a76-a0a6ba22c45a?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-45549
+                                                    Sprockhövel</strong><br>Teilintegrierter, Gebrauchtfahrzeug<br>HU
+                                                09/2024<br>81 kW (110 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 10/2009</span></div>
+                                            <div class="dataCol4"><span>58.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>34.900
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 29.12.2023, 11:16&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381851001"><button class="parking"
+                                                    data-id="381851001"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="374948495">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="374948495"><a class="listing"
+                                            href="index.html?adId=374948495&amp;page=des" data-id="374948495"
+                                            onclick="return false">Benimar Mileo 282 Northautocap ULTRA-AUTARK 420W
+                                            Solar</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/4f/4f53a296-9683-4af9-b3d2-2fb96beae0ca?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-53797 Lohmar</strong><br>Teilintegrierter,
+                                                Gebrauchtfahrzeug<br>HU 06/2024<br>118 kW (160 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 06/2021</span></div>
+                                            <div class="dataCol4"><span>52.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>69.900
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 29.12.2023, 10:51&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="374948495"><button class="parking"
+                                                    data-id="374948495"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381846350">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381846350"><a class="listing"
+                                            href="index.html?adId=381846350&amp;page=des" data-id="381846350"
+                                            onclick="return false">Opel Movano B (L2H2)</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/b0/b0eaf390-192f-46c0-b92d-d51554b020dc?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-50999 Köln</strong><br>Kastenwagen,
+                                                Gebrauchtfahrzeug<br>HU 06/2024<br>81 kW (110 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 07/2016</span></div>
+                                            <div class="dataCol4"><span>70.825 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>33.300
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 29.12.2023, 10:00&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381846350"><button class="parking"
+                                                    data-id="381846350"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381369004">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381369004"><a class="listing"
+                                            href="index.html?adId=381369004&amp;page=des" data-id="381369004"
+                                            onclick="return false">Knaus Van Ti Vansation 640 MEG/ MAN; AHK; Automatik
+                                        </a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/9f/9fb112ce-8e48-4c1d-a995-63eabad0967f?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-48308 Senden</strong><br>Teilintegrierter,
+                                                Gebrauchtfahrzeug<br>HU 05/2024<br>130 kW (177 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 05/2022</span></div>
+                                            <div class="dataCol4"><span>9.500 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>74.999 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 29.12.2023, 09:10&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381369004"><button class="parking"
+                                                    data-id="381369004"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="380889343">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="380889343"><a class="listing"
+                                            href="index.html?adId=380889343&amp;page=des" data-id="380889343"
+                                            onclick="return false">Citroën Jumper</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/63/639e35e9-2f34-48ab-ab4b-6d7da440ee3b?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-65719 Hofheim</strong><br>Kastenwagen,
+                                                Gebrauchtfahrzeug<br>HU 08/2025<br>96 kW (131 PS)<br>Klimaautomatik
+                                            </div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 09/2015</span></div>
+                                            <div class="dataCol4"><span>93.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>33.500
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 29.12.2023, 02:20&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="380889343"><button class="parking"
+                                                    data-id="380889343"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381836996">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381836996"><a class="listing"
+                                            href="index.html?adId=381836996&amp;page=des" data-id="381836996"
+                                            onclick="return false">Weinsberg CaraCore 700 MEG</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/be/be587412-2105-42ba-b6fa-4f7aa8bfbb04?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-48493 Wettringen</strong><br>Integrierter,
+                                                Gebrauchtfahrzeug<br>HU 02/2025<br>118 kW (160 PS)</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 06/2020</span></div>
+                                            <div class="dataCol4"><span>34.500 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>74.900
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 23:17&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381836996"><button class="parking"
+                                                    data-id="381836996"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381833717">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381833717"><a class="listing"
+                                            href="index.html?adId=381833717&amp;page=des" data-id="381833717"
+                                            onclick="return false">Citroën Adria Twin 600 SPT Platinum</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/9e/9ebfb3a8-3797-4816-9c6e-497d736bb59c?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-41464 Neuss</strong><br>Kastenwagen,
+                                                Gebrauchtfahrzeug<br>HU 11/2025<br>96 kW (131 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 11/2017</span></div>
+                                            <div class="dataCol4"><span>75.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>33.900 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 21:01&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381833717"><button class="parking"
+                                                    data-id="381833717"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="376779801">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="376779801"><a class="listing"
+                                            href="index.html?adId=376779801&amp;page=des" data-id="376779801"
+                                            onclick="return false">Malibu Malibu Van 640 LE</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/e6/e6f39016-b986-4918-ae92-e8072480851b?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-56242 Quirnbach</strong><br>Kastenwagen,
+                                                Gebrauchtfahrzeug<br>HU 05/2025<br>103 kW (140 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 05/2020</span></div>
+                                            <div class="dataCol4"><span>49.900 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>59.999 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 20:16&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="376779801"><button class="parking"
+                                                    data-id="376779801"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381828594">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381828594"><a class="listing"
+                                            href="index.html?adId=381828594&amp;page=des" data-id="381828594"
+                                            onclick="return false">Mobilvetta Kea I86, 160Ps,4,4To, Automatik,
+                                            Hubstützen ....</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/ca/ca048ac0-ad8d-4b47-845f-4deb1685921d?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-59192 Bergkamen</strong><br>Integrierter,
+                                                Gebrauchtfahrzeug<br>HU 11/2025<br>118 kW (160 PS)<br>Klimaautomatik
+                                            </div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 11/2022</span></div>
+                                            <div class="dataCol4"><span>5.600 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>115.800 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 18:43&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381828594"><button class="parking"
+                                                    data-id="381828594"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381827523">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381827523"><a class="listing"
+                                            href="index.html?adId=381827523&amp;page=des" data-id="381827523"
+                                            onclick="return false">Knaus Sky TI 650 MF Silver Selection</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/36/36c2309f-94c9-453c-8813-081b3bb67b8a?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-52385
+                                                    Nideggen</strong><br>Teilintegrierter, Gebrauchtfahrzeug<br>HU
+                                                10/2025<br>96 kW (131 PS)<br>Klimaautomatik</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 02/2016</span></div>
+                                            <div class="dataCol4"><span>55.500 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>49.500 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 18:17&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381827523"><button class="parking"
+                                                    data-id="381827523"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381827307">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381827307"><a class="listing"
+                                            href="index.html?adId=381827307&amp;page=des" data-id="381827307"
+                                            onclick="return false">Pössl CAMPSTER </a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/98/989f4a43-39bf-4736-83b5-330830ab8a09?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-54290 Trier</strong><br>Kastenwagen,
+                                                Gebrauchtfahrzeug<br>HU 04/2025<br>130 kW (177 PS)<br>Klimaautomatik
+                                            </div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 05/2018</span></div>
+                                            <div class="dataCol4"><span>158.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>32.900 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 18:13&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381827307"><button class="parking"
+                                                    data-id="381827307"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381826432">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381826432"><a class="listing"
+                                            href="index.html?adId=381826432&amp;page=des" data-id="381826432"
+                                            onclick="return false">Ford Tourneo Costum Sport</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/95/95c81331-efa5-4f9b-a8d5-b500c3005242?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-59757 Arnsberg </strong><br>Kastenwagen,
+                                                Gebrauchtfahrzeug<br>HU 11/2024<br>135 kW (184 PS)<br>Klimaautomatik
+                                            </div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 10/2019</span></div>
+                                            <div class="dataCol4"><span>53.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>37.200 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 17:53&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381826432"><button class="parking"
+                                                    data-id="381826432"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381431546">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381431546"><a class="listing"
+                                            href="index.html?adId=381431546&amp;page=des" data-id="381431546"
+                                            onclick="return false">Carado T447 Edition Sat TV, Hubstützen, Luftfederung,
+                                        </a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/02/02d1c57e-1eb9-4b2b-bdeb-df14fe496cf1?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-42657
+                                                    Solingen</strong><br>Teilintegrierter, Gebrauchtfahrzeug<br>HU
+                                                04/2024<br>110 kW (150 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 03/2018</span></div>
+                                            <div class="dataCol4"><span>29.500 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>62.900
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 17:09&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381431546"><a class="parkOverview"
+                                                    data-listid="656dc20b63a22e311e9977c7">Zum Parkplatz</a></div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381822131">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381822131"><a class="listing"
+                                            href="index.html?adId=381822131&amp;page=des" data-id="381822131"
+                                            onclick="return false">Concorde Charisma 900 L VOLLAUSSTATTUNG! SOLAR -
+                                            Retarder</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/13/13b93a35-d7c9-4761-a095-59058a7ee55d?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-46414 Rhede</strong><br>Integrierter,
+                                                Gebrauchtfahrzeug<br>HU 01/2025<br>184 kW (250 PS)<br>Klimaautomatik
+                                            </div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 01/2021</span></div>
+                                            <div class="dataCol4"><span>16.500 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>249.500 €</strong><small>MwSt. nicht
+                                                ausweisbar<br></small></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 16:29&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381822131"><button class="parking"
+                                                    data-id="381822131"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381819236">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381819236"><a class="listing"
+                                            href="index.html?adId=381819236&amp;page=des" data-id="381819236"
+                                            onclick="return false">Fiat AUTARK, SOLAR, STANDKLIMA, NEUER
+                                            KÜHLSCHRANK!</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/8e/8e32daed-1060-4e51-b298-504d569aa367?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-41849 Wassenberg</strong><br>Alkoven,
+                                                Gebrauchtfahrzeug<br>HU 08/2025<br>94 kW (128 PS)<br>Klimaanlage</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 04/2004</span></div>
+                                            <div class="dataCol4"><span>95.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>23.499
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 15:36&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381819236"><button class="parking"
+                                                    data-id="381819236"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381814616">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381814616"><a class="listing"
+                                            href="index.html?adId=381814616&amp;page=des" data-id="381814616"
+                                            onclick="return false">Citroën Jumper</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/54/544d8f75-8e72-4d57-8eeb-c3d5a3d16dc8?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-60388 Frankfurt</strong><br>Kastenwagen,
+                                                Gebrauchtfahrzeug<br>HU 03/2025<br>94 kW (128 PS)</div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 01/2004</span></div>
+                                            <div class="dataCol4"><span>207.000 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>2.899
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 14:08&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381814616"><button class="parking"
+                                                    data-id="381814616"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="listing" data-id="381814012">
+                                <div class="checkBox"><span></span></div>
+                                <div class="ad">
+                                    <h3 data-id="381814012"><a class="listing"
+                                            href="index.html?adId=381814012&amp;page=des" data-id="381814012"
+                                            onclick="return false">Dethleffs Globebus T1</a> </h3>
+                                    <div class="clearfix"></div>
+                                    <div>
+                                        <div class="moreVehicleImages">
+                                            <div><img
+                                                    src="https://img.classistatic.de/api/v1/mo-prod/images/bf/bf587984-571f-4731-8952-718d77b33554?rule=mo-80.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="vehicleData">
+                                            <div class="dataCol1"><strong>DE-49176 Hilter</strong><br>Teilintegrierter,
+                                                Gebrauchtfahrzeug<br>HU 09/2025<br>110 kW (150 PS)<br>Klimaautomatik
+                                            </div>
+                                            <div class="dataCol2"><span>Privatanbieter</span></div>
+                                            <div class="dataCol3"><span>EZ 04/2017</span></div>
+                                            <div class="dataCol4"><span>92.782 km</span></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="vehiclePrice"><strong>52.490
+                                                €</strong><small>Verhandlungsbasis<br>MwSt. nicht ausweisbar<br></small>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="bottomline">
+                                        <div class="CTA left">&nbsp;</div>
+                                        <div class="CTA middle">&nbsp;</div>
+                                        <div class="CTA right">Online seit 28.12.2023, 13:59&nbsp;&nbsp;&nbsp;&nbsp;<div
+                                                class="parkAction" data-parking="381814012"><button class="parking"
+                                                    data-id="381814012"><span><em>Fahrzeug parken</em></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sesPaginationBox" data-template="sesPagination">
+                        <div class="sesPagination">
+                            <ul>
+                                <li><span>Seite</span></li>
+                                <li class="pagination active"><a data-page="1"
+                                        title="Gehe zu Seite 1"><span>1</span></a></li>
+                                <li class="pagination "><a data-page="2" title="Gehe zu Seite 2"><span>2</span></a></li>
+                                <li class="pagination "><a data-page="3" title="Gehe zu Seite 3"><span>3</span></a></li>
+                                <li class="pagination "><a data-page="4" title="Gehe zu Seite 4"><span>4</span></a></li>
+                                <li class="pagination "><a data-page="5" title="Gehe zu Seite 5"><span>5</span></a></li>
+                                <li class="pagination "><a data-page="6" title="Gehe zu Seite 6"><span>6</span></a></li>
+                                <li class="pagination "><a data-page="7" title="Gehe zu Seite 7"><span>7</span></a></li>
+                                <li class="pagination "><a data-page="8" title="Gehe zu Seite 8"><span>8</span></a></li>
+                                <li class="pagination "><a data-page="9" title="Gehe zu Seite 9"><span>9</span></a></li>
+                                <li class="pagination "><a data-page="10" title="Gehe zu Seite 10"><span>10</span></a>
+                                </li>
+                                <li><span>... von <a data-page="26" title="Gehe zu Seite 26">26</a></span></li>
+                                <li class="nextPage"><a data-page="2" title="Zur nächsten Seite"><span>Zur nächsten
+                                            Seite</span>&nbsp;</a></li>
+                                <li class="lastPage"><a data-page="26" title="Zur letzten Seite"><span>Zur letzten
+                                            Seite</span>&nbsp;</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="sesDealerPriceLegend">Händlerpreise sind orange gekennzeichnet</div>
+            </div>
+            <div class="desContainer inactive" id="des-page">
+                <div class="desTopRow hidden"><a href="#" class="back">%Back%</a></div>
+                <div class="desListing">
+                    <div class="contentBox">
+                        <!--div class="positionFix" data-template="desVcard"> </div-->
+                        <div class="carDetailsGlobal" data-template="desVehicleDetailsGlobal"> </div>
+                        <div data-template="desCtaFooter"> </div>
+                    </div>
+                </div>
+                <div style="text-align: right; color: #ff6600; font-weight: bold; margin-top: 6px;">
+                    Händlerpreise sind orange gekennzeichnet </div>
+                <div class="clearfix"> </div>
+            </div>
+
+            <div class="cpoContainer inactive" id="cpo-page">
+                <div data-template="cpoPage">
+                </div>
+                <div class="clearfix"></div>
+                <div class="cpoDealerPriceLegend">
+                    Händlerpreise sind orange gekennzeichnet
+                </div>
+            </div>
+            <div class="truckContainer inactive" id="truck-page">
+                <div class="truck-category-selection cBox cBox--content">
+                    <a href="index.html?vc=VanUpTo7500&amp;page=dss">
+                        <i class="gicon-category-xxl-VUT75-black"></i>
+                        <p>Transporter und Lkw bis 7,5 t</p>
+                    </a>
+                    <a href="index.html?vc=TruckOver7500&amp;page=dss">
+                        <i class="gicon-category-xxl-TO75-black"></i>
+                        <p>Lkw über 7,5 t</p>
+                    </a>
+                    <a href="index.html?vc=SemiTrailerTruck&amp;page=dss">
+                        <i class="gicon-category-xxl-STT-black"></i>
+                        <p>Sattelzugmaschinen (SZM)</p>
+                    </a>
+                    <a href="index.html?vc=Trailer&amp;page=dss">
+                        <i class="gicon-category-xxl-T-black"></i>
+                        <p>Anhänger</p>
+                    </a>
+                    <a href="index.html?vc=SemiTrailer&amp;page=dss">
+                        <i class="gicon-category-xxl-ST-black"></i>
+                        <p>Auflieger</p>
+                    </a>
+                    <a href="index.html?vc=ConstructionMachine&amp;page=dss">
+                        <i class="gicon-category-xxl-CM-black"></i>
+                        <p>Baumaschinen</p>
+                    </a>
+                    <a href="index.html?vc=Bus&amp;page=dss">
+                        <i class="gicon-category-xxl-B-black"></i>
+                        <p>Busse</p>
+                    </a>
+                    <a href="index.html?vc=AgriculturalVehicle&amp;page=dss">
+                        <i class="gicon-category-xxl-AV-black"></i>
+                        <p>Agrarfahrzeuge</p>
+                    </a>
+                    <a href="index.html?vc=ForkliftTruck&amp;page=dss">
+                        <i class="gicon-category-xxl-FT-black"></i>
+                        <p>Stapler</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

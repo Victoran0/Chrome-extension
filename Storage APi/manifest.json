@@ -1,0 +1,14 @@
+{
+    "name": "storage API",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "just learning the chrome storage API",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [ "storage" ],
+    "action": {
+        "default_title": "storage API",
+        "default_popup": "popup.html"
+    }
+}

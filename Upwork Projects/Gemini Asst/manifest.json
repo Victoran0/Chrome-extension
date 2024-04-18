@@ -1,0 +1,19 @@
+{
+    "name": "Gemini Assistant",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "Google Gemini chatbot Assistant",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "contextMenus", "tabs"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://gemini.google.com/app/*"],
+            "js": ["content.js"]
+        }
+    ]
+}

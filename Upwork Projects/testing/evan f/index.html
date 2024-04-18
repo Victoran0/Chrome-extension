@@ -1,0 +1,186 @@
+
+<html>
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/simulate.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../fonts.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&amp;display=swap" rel="stylesheet">
+    </head>
+    <body class="widget_body" id="widget_body_id">
+        <div id = 'close'>X</div>
+        <!-- <div class='refresh_js refresh'></div> -->
+        <div class="right-sidebar">
+            <div id="media_tabs" class="">
+              <ul class="nav nav-tabs custom-scroll" style="display: flex; flex-direction: row;justify-content: space-between; overflow-y: auto; padding: 0 3px 1px 1px;">
+                <li class="nav-item active">
+                  <a class="nav-link media_tab_link" data-item="all"><span><div class=""></div>ALL</span><span class="badge">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link media_tab_link" data-item="twitter"><span><img class="service-icon" src="https://www.google.com/s2/favicons?domain_url=twitter.com" /><span class="d-name">TWITTER</span></span><span class="badge">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link media_tab_link" data-item="facebook"><span><img class="service-icon" src="https://www.google.com/s2/favicons?domain_url=facebook.com" /><span class="d-name">FACEBOOK</span></span><span class="badge">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link media_tab_link" data-item="instagram"><span><img class="service-icon" src="https://www.google.com/s2/favicons?domain_url=instagram.com" /><span class="d-name">INSTAGRAM</span></span><span class="badge">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link media_tab_link" data-item="linkedin"><span><img class="service-icon" src="https://www.google.com/s2/favicons?domain_url=linkedin.com" /><span class="d-name">LINKEDIN</span></span><span class="badge">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link media_tab_link" data-item="tiktok"><span><img class="service-icon" src="https://www.google.com/s2/favicons?domain_url=tiktok.com" /><span class="d-name">TIKTOK</span></span><span class="badge">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link media_tab_link" data-item="youtube"><span><img class="service-icon" src="https://www.google.com/s2/favicons?domain_url=youtube.com" /><span class="d-name">YOUTUBE</span></span><span class="badge">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link media_tab_link" data-item="podcast"><span><img class="service-icon" src="https://www.google.com/s2/favicons?domain_url=podcast.com" /><span class="d-name">PODCASTS</span></span><span class="badge">0</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link media_tab_link" data-item="ai"><span><img class="service-icon" src="https://www.google.com/s2/favicons?domain_url=openai.com" /><span class="d-name">A.I.</span></span></a>
+                </li>
+              </ul>
+            </div>           
+            <div id="MEDIA_CONTAINER"></div>
+            <div id="RC_TWEET"></div>
+            <div id="ROOT_ELEMENT">
+    
+                <div class="widget_inner">
+                    <div class="spinner">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="lds-coolors" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100" style="animation-play-state:running;animation-delay:0s;background:0 0"><defs style="animation-play-state:running;animation-delay:0s"><mask id="a" style="animation-play-state:running;animation-delay:0s"><circle cx="50" cy="50" r="20" stroke="#fff" stroke-dasharray="94.248 31.416" stroke-linecap="round" stroke-width="9" style="animation-play-state:running;animation-delay:0s" transform="rotate(196.789 50 50)"><animateTransform attributeName="transform" dur="0.7s" repeatCount="indefinite" type="rotate" values="0 50 50;360 50 50"/></circle></mask></defs><g mask="url(#a)" style="animation-play-state:running;animation-delay:0s"><path style="animation-play-state:running;animation-delay:0s" d="M20.5 0h20.333v100H20.5z"><animate attributeName="fill" begin="-0.6666666666666666s" dur="0.7s" repeatCount="indefinite" values="#dd413a;#1aafd7;#04284d"/></path><path style="animation-play-state:running;animation-delay:0s" d="M39.833 0h20.333v100H39.833z"><animate attributeName="fill" begin="-0.3333333333333333s" dur="0.7s" repeatCount="indefinite" values="#dd413a;#1aafd7;#04284d"/></path><path style="animation-play-state:running;animation-delay:0s" d="M59.167 0H79.5v100H59.167z"><animate attributeName="fill" begin="0s" dur="0.7s" repeatCount="indefinite" values="#dd413a;#1aafd7;#04284d"/></path></g></svg>
+                    </div>
+                    <div class="no_result"
+                        style="display: none;">
+                        <b>
+                            It doesn't look like there's much conversation on the web about this topic, especially of the quality worthy of sharing with you.
+                        </b>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        
+        <div class="leftside_bar leftside_bar_js">
+            <div class="copy_link padding_bottom_15">
+                <a href="#" class="leftside_link">
+                    <img src="/twitter.svg" alt="" class="bar_icon">
+                    <span class="bar_icon_text">copy</span>
+                </a>
+                <a href="#" class="link_text link_text_copy link_style" title="Click to copy to clipboard"></a>
+            </div>
+            <div class="share padding_bottom_15">
+                <a href="#" class="leftside_link">
+                    <img src="/twitter.svg" alt="" class="bar_icon">
+                    <span class="bar_icon_text">share</span>
+                </a>
+                <a href="#" class="link_text link_text_share link_style" title="Click to share on twitter"></a>
+            </div>
+            <div class="view">
+                <a href="#" class="leftside_link">
+                    <img src="/twitter.svg" alt="" class="bar_icon">
+                    <span class="bar_icon_text">view</span>
+                </a>
+                <a href="#" class="link_text link_text_view bottom_link_redirect link_style" title="Click to view on twitter"></a>
+            </div>
+        </div>
+        <div id="fullPageTweets" class="bottom_bar bottom_bar_js fullPageTweets_hidden">
+            <!-- <span class="link_text link_text_copy bottom_link_style" title="Click to copy to clipboard"></span>
+            <div class="bottom_links">
+                <a href="#" class="bottom_link bottom_link_redirect" title="Click to to view on twitter">
+                    View on: <img src="/twitter_bottom.svg" alt="" class="bottom_bar_icon">
+                </a>
+                <a href="#" class="bottom_link link_text_share" title="Click to share on twitter">
+                    Share on: <img src="/twitter_bottom.svg" alt="" class="bottom_bar_icon">
+                </a>
+            </div> -->
+            <div>
+              <span id="fullPageTweets-count">
+
+              </span>
+              <span>
+                More Tweets - 
+              </span>
+              <a id="fullPageTweets-expand" style='display: none;'>
+                Click to Expand
+              </a>
+              <span id='fullPageTweets-pips' style='display: none;'> | </span>
+              <a id="fullPageTweets-view" style='display: none;'>
+                View Full Page
+              </a>
+            </div>
+        </div>
+        <div class="left_side_bar left_side_bar_js">
+            <a href="#" class="left-bar-action link_text_share" title="Share this Related Conversation with your Followers">
+               <img src="/twitter_retweet.png" alt="" data-openinparent="true">
+            </a>
+            <a href="#" class="left-bar-action bottom_link_redirect" title="View this conversation in full-page mode">
+                <img src="/twitter_expand.png" alt="" data-openinparent="true">
+            </a>
+        </div>
+
+        <!-- Non Twitter sidebar for hide/show unit expand action -->
+        <div class="non_twitter_left_side_bar">
+          <div class="__sidebar">
+            <div class="video item video_link">
+              <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d)">
+                  <path d="M28.6127 8.81931H8.45431C7.06266 8.81931 5.93451 9.94746 5.93451 11.3391V25.198C5.93451 26.5897 7.06266 27.7178 8.45431 27.7178H28.6127C30.0043 27.7178 31.1325 26.5897 31.1325 25.198V11.3391C31.1325 9.94746 30.0043 8.81931 28.6127 8.81931Z" stroke="#111111" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24.833 2.51981L18.5335 8.8193L12.234 2.51981" stroke="#111111" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <filter id="filter0_d" x="-0.585266" y="0" width="38.2376" height="38.2376" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="2"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                  </filter>
+                </defs>
+              </svg>
+
+              <div class="name">Video</div>
+            </div>
+            <div id="expand-trigger" class="animate expand-sidebar item">
+              <svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.9515 20.0807C16.8481 20.1841 16.7168 20.2358 16.5577 20.2358L8.63524 20.2358V23.672C8.63524 23.9743 8.53184 24.2288 8.32503 24.4357C8.11821 24.6425 7.86368 24.7459 7.56141 24.7459C7.25915 24.7459 7.00461 24.6425 6.7978 24.4357L1.4525 19.0904C1.24569 18.8835 1.14228 18.629 1.14228 18.3267C1.14228 18.0245 1.24569 17.7699 1.4525 17.5631L6.7978 12.2178C7.00461 12.011 7.25915 11.9076 7.56141 11.9076C7.86368 11.9076 8.11821 12.011 8.32503 12.2178C8.53184 12.4246 8.63524 12.6792 8.63524 12.9814L8.63524 16.4177L16.5577 16.4177C16.7168 16.4177 16.8481 16.4694 16.9515 16.5728C17.0549 16.6762 17.1066 16.8075 17.1066 16.9666V19.6869C17.1066 19.846 17.0549 19.9773 16.9515 20.0807ZM36.5788 19.0904L31.2335 24.4357C31.0266 24.6425 30.7721 24.7459 30.4698 24.7459C30.1676 24.7459 29.913 24.6425 29.7062 24.4357C29.4994 24.2288 29.396 23.9743 29.396 23.672V20.2358L21.4735 20.2358C21.3144 20.2358 21.1832 20.1841 21.0798 20.0807C20.9764 19.9773 20.9247 19.846 20.9247 19.6869V16.9666C20.9247 16.8075 20.9764 16.6762 21.0798 16.5728C21.1832 16.4694 21.3144 16.4177 21.4735 16.4177L29.396 16.4177L29.396 12.9814C29.396 12.6792 29.4994 12.4246 29.7062 12.2178C29.913 12.011 30.1676 11.9076 30.4698 11.9076C30.7721 11.9076 31.0266 12.011 31.2335 12.2178L36.5788 17.5631C36.7856 17.7699 36.889 18.0245 36.889 18.3267C36.889 18.629 36.7856 18.8835 36.5788 19.0904Z" fill="black"/>
+              </svg>
+
+              <div class="name">Expand Sidebar</div>
+            </div>
+            <a href="#" class="twitter-view item bottom_link bottom_link_redirect">
+              <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path d="M25.12 2.5918L25.9839 2.53478C25.9727 2.36518 25.9117 2.20265 25.8085 2.06754C25.7054 1.93244 25.5647 1.83076 25.404 1.77524C25.2434 1.71972 25.0699 1.71283 24.9053 1.75542C24.7408 1.79801 24.5925 1.8882 24.4789 2.0147L25.12 2.5918ZM24.2595 7.70455C24.2595 7.47542 24.1685 7.25567 24.0064 7.09366C23.8444 6.93164 23.6247 6.84062 23.3955 6.84062C23.1664 6.84062 22.9467 6.93164 22.7847 7.09366C22.6226 7.25567 22.5316 7.47542 22.5316 7.70455H24.2595ZM13.0456 7.84623H12.1817H13.0456ZM13.0456 9.50325H13.9096H13.0456ZM0.967895 21.5983V20.7344C0.78239 20.7341 0.601739 20.7936 0.452665 20.904C0.303591 21.0144 0.194013 21.1699 0.14014 21.3474C0.0862666 21.5249 0.0909605 21.715 0.153527 21.8897C0.216093 22.0643 0.333209 22.2142 0.487549 22.3171L0.967895 21.5983ZM2.6923 2.5918L3.50267 2.28943C3.44378 2.13169 3.34008 1.99459 3.20432 1.895C3.06856 1.79541 2.90665 1.73765 2.73851 1.72884C2.57037 1.72003 2.40331 1.76054 2.25789 1.8454C2.11246 1.93026 1.995 2.05577 1.91995 2.20649L2.6923 2.5918ZM9.59338 18.1426L10.205 18.7525C10.3088 18.6484 10.3843 18.5195 10.4244 18.3781C10.4645 18.2367 10.4678 18.0874 10.4341 17.9443C10.4003 17.8012 10.3306 17.6691 10.2316 17.5605C10.1326 17.4519 10.0075 17.3703 9.86811 17.3236L9.59338 18.1426ZM22.0755 4.27301L21.4361 4.85357L21.7472 5.19742L22.205 5.1283L22.0755 4.27301ZM24.2595 2.64882C24.3476 3.9931 24.2647 4.80865 24.0469 5.42377C23.8361 6.01988 23.4664 6.51059 22.7977 7.15163L23.9934 8.39915C24.7502 7.67345 25.3342 6.96157 25.6763 6.00087C26.0098 5.05746 26.0772 3.96545 25.9822 2.53478L24.2577 2.64882H24.2595ZM24.2595 8.96243V7.70627H22.5316V8.96416H24.2595V8.96243ZM12.1817 7.84623V9.50325H13.9096V7.84623H12.1817ZM12.1817 9.50325V10.3672H13.9096V9.50325H12.1817ZM18.2897 1.72787C17.4867 1.72833 16.6916 1.88694 15.9499 2.19466C15.2082 2.50239 14.5343 2.95319 13.9668 3.52133C13.3993 4.08947 12.9493 4.76383 12.6424 5.5059C12.3355 6.24796 12.1778 7.04321 12.1783 7.84623H13.9061C13.9057 7.26997 14.0188 6.69927 14.2389 6.16672C14.4591 5.63417 14.782 5.15022 15.1892 4.7425C15.5965 4.33478 16.08 4.01129 16.6123 3.7905C17.1446 3.56972 17.7152 3.45596 18.2914 3.45573V1.72787H18.2897ZM22.5299 8.96243C22.5316 16.4199 16.4962 22.4622 9.05429 22.4622V24.1901C17.4517 24.1901 24.2595 17.3719 24.2595 8.96243H22.5316H22.5299ZM1.88366 2.89418C2.82362 5.40303 6.34846 10.3672 13.0456 10.3672V8.63932C7.31606 8.63932 4.28712 4.38878 3.50094 2.28943L1.88193 2.89418H1.88366ZM1.91995 2.20649C0.110875 5.82809 -0.16731 9.34256 1.14759 12.3352C2.45904 15.3192 5.28064 17.6138 9.32038 18.9616L9.86811 17.3236C6.14457 16.0795 3.78949 14.0544 2.72859 11.6389C1.67113 9.23198 1.82491 6.26524 3.46638 2.97712L1.91995 2.20649ZM8.98172 17.5326C7.94155 18.5745 4.81412 20.7344 0.967895 20.7344V22.4622C5.40159 22.4622 8.94543 20.0156 10.205 18.7525L8.98172 17.5326ZM22.7165 3.69418C22.1579 3.07466 21.4753 2.57947 20.7129 2.24073C19.9506 1.90199 19.1256 1.72726 18.2914 1.72787V3.45573C19.5372 3.45573 20.6586 3.9931 21.4361 4.85357L22.7148 3.69418H22.7165ZM22.205 5.1283C23.5814 4.90345 24.8383 4.21153 25.7644 3.16891L24.4789 2.0147C23.8201 2.75896 22.9261 3.25479 21.9459 3.41945L22.205 5.1283ZM0.487549 22.3171C3.32297 24.2074 6.29489 24.1901 9.05429 24.1901V22.4622C6.23787 22.4622 3.78777 22.4432 1.44824 20.8795L0.487549 22.3171Z" fill="#050505"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="25.9179" height="25.9179" fill="white" transform="translate(0.103638)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+
+
+              <div class="name">Twitter View</div>
+            </a>
+            <a href="#" class="twitter-share item bottom_link link_text_share">
+              <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.8566 19.0007C20.3555 19.0027 19.86 19.1091 19.3998 19.3137C18.9396 19.5182 18.5241 19.8166 18.1784 20.191L9.10977 15.5066C9.33285 14.8084 9.33285 14.0546 9.10977 13.3564L18.1933 8.58747C18.8439 9.29522 19.7262 9.72798 20.6687 9.80162C21.6113 9.87527 22.5466 9.58454 23.2931 8.98595C24.0395 8.38735 24.5436 7.52366 24.7075 6.56274C24.8714 5.60182 24.6833 4.61232 24.1798 3.78657C23.6763 2.96082 22.8934 2.35781 21.9832 2.09475C21.073 1.83169 20.1006 1.92736 19.2549 2.36318C18.4092 2.799 17.7507 3.54383 17.4074 4.45289C17.0641 5.36196 17.0605 6.37031 17.3973 7.28197L8.40303 12.0048C7.91727 11.3916 7.25966 10.9484 6.52035 10.7361C5.78103 10.5238 4.9962 10.5527 4.27344 10.8189C3.55067 11.0851 2.92536 11.5755 2.48321 12.223C2.04105 12.8704 1.80371 13.6432 1.80371 14.4353C1.80371 15.2275 2.04105 16.0002 2.48321 16.6477C2.92536 17.2951 3.55067 17.7855 4.27344 18.0517C4.9962 18.3179 5.78103 18.3468 6.52035 18.1345C7.25966 17.9222 7.91727 17.4791 8.40303 16.8658L17.375 21.5272C17.2234 21.9474 17.1453 22.392 17.1443 22.8404C17.1443 23.5998 17.3625 24.3422 17.7712 24.9736C18.1799 25.6051 18.7609 26.0972 19.4406 26.3878C20.1203 26.6784 20.8682 26.7545 21.5897 26.6063C22.3113 26.4582 22.9741 26.0925 23.4943 25.5555C24.0145 25.0185 24.3687 24.3343 24.5123 23.5895C24.6558 22.8447 24.5821 22.0726 24.3006 21.371C24.0191 20.6694 23.5423 20.0697 22.9306 19.6478C22.3189 19.2259 21.5997 19.0007 20.864 19.0007H20.8566ZM20.8566 3.64194C21.298 3.64194 21.7295 3.77706 22.0965 4.03021C22.4635 4.28335 22.7496 4.64316 22.9185 5.06413C23.0875 5.4851 23.1316 5.94832 23.0455 6.39521C22.9594 6.84211 22.7469 7.25261 22.4347 7.5748C22.1226 7.897 21.7249 8.11642 21.292 8.20531C20.8591 8.2942 20.4103 8.24858 20.0025 8.07421C19.5947 7.89984 19.2461 7.60455 19.0009 7.22569C18.7557 6.84683 18.6248 6.40141 18.6248 5.94576C18.6248 5.33475 18.8599 4.74877 19.2785 4.31672C19.697 3.88467 20.2647 3.64194 20.8566 3.64194ZM5.58349 16.6969C5.14208 16.6969 4.71058 16.5618 4.34356 16.3086C3.97654 16.0555 3.69048 15.6957 3.52156 15.2747C3.35264 14.8538 3.30844 14.3905 3.39456 13.9436C3.48067 13.4967 3.69323 13.0862 4.00536 12.764C4.31748 12.4418 4.71516 12.2224 5.14809 12.1335C5.58102 12.0446 6.02976 12.0903 6.43757 12.2646C6.84539 12.439 7.19395 12.7343 7.43919 13.1132C7.68442 13.492 7.81532 13.9374 7.81532 14.3931C7.81532 15.0041 7.58018 15.5901 7.16163 16.0221C6.74308 16.4542 6.17541 16.6969 5.58349 16.6969ZM20.8566 25.1442C20.4152 25.1442 19.9837 25.0091 19.6167 24.756C19.2496 24.5028 18.9636 24.143 18.7947 23.722C18.6257 23.3011 18.5815 22.8379 18.6677 22.391C18.7538 21.9441 18.9663 21.5336 19.2785 21.2114C19.5906 20.8892 19.9883 20.6698 20.4212 20.5809C20.8541 20.492 21.3029 20.5376 21.7107 20.712C22.1185 20.8863 22.4671 21.1816 22.7123 21.5605C22.9575 21.9393 23.0884 22.3848 23.0884 22.8404C23.0884 23.4514 22.8533 24.0374 22.4347 24.4695C22.0162 24.9015 21.4485 25.1442 20.8566 25.1442Z" fill="#050505"/>
+              </svg>
+
+              <div class="name">Twitter Share</div>
+            </a>
+          </div>
+        </div>
+        
+        <script src="js/lodash.js"></script>
+        <script src="js/clipboard.min.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/d3.v7.min.js"></script>
+        <script src="js/widget.js"></script>
+        <script src="js/load_widjet.js"></script>
+        <script src="js/youtube_api_iframe_embeds.js"></script>
+    </body>
+</html>

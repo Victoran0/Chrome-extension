@@ -1,0 +1,23 @@
+{
+    "name": "learning dom manipulation",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "Learniong dom manipulation with chrome extensions",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://chat.openai.com/*"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_title": "L dom acts",
+        "default_popup": "popup.html"
+    }
+}

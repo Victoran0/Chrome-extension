@@ -1,0 +1,19 @@
+{
+    "name": "learning Message Passing",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "Learning message passing",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "contextMenus"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.google.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}

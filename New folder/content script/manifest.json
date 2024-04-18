@@ -1,0 +1,24 @@
+﻿{
+  "name": "Chapter 10 (MV3) content scripts",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This is Chapter 10",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.wikipedia.org/*"
+      ],
+      "js": [
+        "matches.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://nory-soft.web.app/*"
+      ],
+      "js": [
+        "matches.js"
+      ]
+    }
+  ]
+}

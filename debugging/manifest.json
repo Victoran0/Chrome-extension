@@ -1,0 +1,10 @@
+{
+"name": "Debugging with console",
+"version": "1.0",
+"manifest_version": 3,
+"description": "Using a chrome extension to send data to console",
+"action": {
+    "default_title": "Debugging with console",
+    "default_popup": "index.html"
+}
+}

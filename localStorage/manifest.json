@@ -1,0 +1,13 @@
+﻿{
+  "name": "Using local Storage!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Save to Local Storage",
+  "action": {
+    "default_title": "Save to localStorage",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "victor_codes.PNG"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Auto Print",
+    "description": "This chrome extensiion helps a user auto print on its designated pages",
+    "manifest_version": 3,
+    "version": "0.1",
+    "permissions": ["tabs", "printerProvider"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/search*"], 
+            "js": ["script.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Auto Print"
+    }
+    
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Learning Message Passing",
+    "description": "Learning msg passing",
+    "manifest_version": 3,
+    "version": "1.1",
+    "permissions": ["tabs", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+            {
+                "matches": ["*://*.nairaland.com/*"],
+                "js": ["matches.js"]
+            }
+        ],
+    "action": {
+        "default_popup": "popup.html",
+        "default-title": "Message Passing"
+    }
+}

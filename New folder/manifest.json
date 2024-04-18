@@ -1,0 +1,19 @@
+﻿{
+  "name": "Chapter 5 (MV3) executeScript",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This is Chapter 5",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "I am Chapter 5",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "Chapter_5_32.png"
+    }
+  }
+}

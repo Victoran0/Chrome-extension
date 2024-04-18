@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Timer Extension",
+    "version": "1.0",
+    "description": "A timer counter Extension",
+    "icons": {
+        "16": "assets/hourg.png",
+        "48": "assets/hourg.png",
+        "128": "assets/hourg.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "assets/hourg.png",
+            "24": "assets/hourg.png",
+            "32": "assets/hourg.png"
+        },
+        "default_title": "Timer Extension",
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html"
+}
